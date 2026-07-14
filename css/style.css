@@ -49,3 +49,61 @@ body {
     background-color: var(--card);
     border-radius: 32px;
 }
+
+@media (max-width: 768px) {
+
+    .dashboard {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+
+    }
+
+    .pomodoro-card,
+    .mascot-card,
+    .missions-card,
+    .environment-card {
+
+        width: 100%;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .timer-circle {
+
+        width: 220px;
+        height: 220px;
+
+    }
+
+    .timer {
+
+        font-size: 64px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cat-area {
+
+        position: static;
+
+        margin-top: 20px;
+
+    }
+
+    .cat-area img {
+
+        width: 180px;
+
+    }
+
+}
