@@ -311,6 +311,8 @@
 
     border-radius:20px;
 
+    transition: width .5s ease;
+
 }
 
 
@@ -381,6 +383,36 @@
 
     gap:20px;
 
+    flex:1;
+
+    min-height:0;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+.missions-list::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.missions-list::-webkit-scrollbar-track{
+
+    background:#ECD6BB;
+
+    border-radius:20px;
+
+}
+
+.missions-list::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
 }
 
 .mission{
@@ -411,7 +443,9 @@
 
 .add-mission{
 
-    margin-top:35px;
+    margin-top:20px;
+
+    flex-shrink:0;
 
     width:100%;
 
@@ -431,7 +465,7 @@
 
     cursor:pointer;
 
-    transition: 0.2s ease;
+    transition:.2s ease;
 
 }
 
@@ -778,5 +812,67 @@
     transform: translateY(-2px);
 
     opacity: .95;
+
+}
+
+@keyframes levelUp {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    30% {
+
+        transform: translateY(-25px);
+
+    }
+
+    60% {
+
+        transform: translateY(0);
+
+    }
+
+    80% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.level-up {
+
+    animation: levelUp .8s ease;
+
+}
+
+.delete-mission{
+
+    margin-left:auto;
+
+    background:none;
+
+    border:none;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.delete-mission:hover{
+
+    transform:scale(1.15);
 
 }

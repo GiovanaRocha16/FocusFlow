@@ -30,6 +30,12 @@
 
     box-shadow:var(--shadow);
 
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
 }
 
 .environment-card{
@@ -128,6 +134,10 @@
     box-shadow:var(--shadow);
 
     padding:35px;
+
+    display: flex;
+
+    flex-direction: column;
 
 }
 

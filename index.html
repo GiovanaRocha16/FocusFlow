@@ -132,18 +132,21 @@
 
                 <div class="mascot-level">
 
-                    <h3>
-                        Nível 5
+                    <h3 id="level-title">
+                        Nível 1
                     </h3>
 
                     <div class="progress-bar">
 
-                        <div class="progress-fill"></div>
+                        <div
+                            id="xp-bar"
+                            class="progress-fill">
+                        </div>
 
                     </div>
 
-                    <span>
-                        850 / 960
+                    <span id="xp-text">
+                        0 / 100 XP
                     </span>
 
                 </div>
@@ -155,7 +158,10 @@
                         Nori
                     </h3>
 
-                    <img src="assets/nori.png" alt="Nori">
+                    <img 
+                        id="nori"
+                        src="assets/nori.png"
+                        alt="Nori">
 
                 </div>
 
@@ -183,32 +189,14 @@
 
             </div>
 
-            <div class="missions-list">
-
-                <label class="mission">
-
-                    <input type="checkbox">
-                    <span>Completar 2 pomodoros</span>
-
-                </label>
-
-                <label class="mission">
-
-                    <input type="checkbox">
-                    <span>Beber água</span>
-
-                </label>
-
-                <label class="mission">
-
-                    <input type="checkbox">
-                    <span>Ler 20 páginas</span>
-
-                </label>
-
+            <div    
+                class="missions-list"
+                id="missions-list">
             </div>
 
-            <button class="add-mission">
+            <button 
+                class="add-mission"
+                id="add-mission-button">
 
                 + Nova Missão
 
@@ -230,28 +218,36 @@
 
             <div class="environment-buttons">
 
-                <button class="environment-button">
+                <button
+                    class="environment-button"
+                    id="rain-button">
 
                     <img src="assets/chuva.png" alt="Chuva">
                     <span>Chuva</span>
 
                 </button>    
                 
-                <button class="environment-button">
+                <button 
+                    class="environment-button"
+                    id="cafe-button">
 
                     <img src="assets/café.png" alt="Café">
                     <span>Café</span>
 
                 </button>
 
-                <button class="environment-button">
+                <button 
+                    class="environment-button"
+                    id="ocean-button">
 
                     <img src="assets/oceano.png" alt="Oceano" class="ocean-icon">
                     <span>Oceano</span>
 
                 </button>
 
-                <button class="environment-button">
+                <button 
+                    class="environment-button"
+                    id="forest-button">
 
                     <img src="assets/floresta.png" alt="Floresta">
                     <span>Floresta</span>
@@ -263,7 +259,12 @@
             <div class="volume-control">
 
                 <label>Som</label>
-                <input type="range" min="0" max="100" value="50">
+                <input
+                    id="volume-slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50">
 
             </div>
 
@@ -347,6 +348,63 @@
     </div>
 
 </div>
+
+    <div id="mission-modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Nova Missão</h2>
+
+            <p>Nome da missão</p>
+
+            <input
+                type="text"
+                id="mission-input"
+                placeholder="Ex.: Estudar Circuitos">
+            
+            <div class="modal-buttons">
+
+                <button
+                    id="cancel-mission"
+                    class="modal-button cancel-button">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    id="save-mission"
+                    class="modal-button save-button">
+
+                    Adicionar 
+
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="level-modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>🎉 Parabéns!</h2>
+
+            <p id="level-message">
+                Nori subiu de nível!
+            </p>
+
+            <div class="modal-buttons">
+                <button
+                    id="close-level-modal"
+                    class="modal-button save-button">
+
+                    Continuar 
+
+                </button>
+
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 
