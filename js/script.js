@@ -457,23 +457,6 @@ addMissionButton.addEventListener("click", () => {
 
     missionsList.appendChild(mission);
 
-
-    const checkbox = mission.querySelector("input");
-
-
-    checkbox.addEventListener("change", () => {
-
-        if (checkbox.checked && !checkbox.dataset.rewarded) {
-
-            addXP(10);
-
-            checkbox.dataset.rewarded = "true";
-
-        }
-
-    });
-
-
 });
 
 cancelMission.addEventListener("click", () => {
