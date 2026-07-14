@@ -1,0 +1,44 @@
+@font-face {
+
+    font-family: "Iosevka Charon Mono";
+
+    src: url("../assets/fonts/IosevkaCharonMono-Regular.ttf") format("truetype");
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+@font-face {
+
+    font-family: "Jomhuria";
+
+    src: url("../assets/fonts/Jomhuria-Regular.ttf") format("truetype");
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+:root{
+
+    --background:#F8EAD8;
+
+    --card:#FDF5E9;
+
+    --primary:#939C6E;
+
+    --circle:#ECD6BB;
+
+    --title:#707851;
+
+    --text:#59412D;
+
+    --radius:32px;
+
+    --shadow:0 8px 25px rgba(0,0,0,.10);
+
+}

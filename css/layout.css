@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:var(--background);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:500px 324px 500px;
+
+    grid-template-rows:408px 388px;
+
+    gap:24px;
+
+}
+
+.timer-container {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}

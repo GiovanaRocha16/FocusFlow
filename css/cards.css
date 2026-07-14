@@ -1,0 +1,103 @@
+.pomodoro-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    grid-row:1 / 3;
+
+}
+
+.mascot-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    grid-column:2 / 4;
+
+}
+
+.missions-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+.environment-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+.pomodoro-card {
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    grid-row:1 / 3;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.timer-circle {
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    border:6px solid var(--circle);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.missions-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:35px;
+
+}
+
+.environment-card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:35px;
+
+}

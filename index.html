@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusFlow</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <main class="dashboard">
+
+
+        <!-- Pomodoro -->
+        <section class="pomodoro-card">
+
+            <div class="pomodoro-header">
+
+                <h1 class="logo">FocusFlow</h1>
+
+                <p class="subtitle">
+                    flua, foque, realize
+                </p>
+
+            </div>
+
+
+            <div class="timer-container">
+
+                <div class="timer-circle">
+
+                    <span id="timer" class="timer">
+                        25:00
+                    </span>
+
+                </div>
+
+                <button id="start-button" class="start-button">
+                    Iniciar
+                </button>
+
+            </div> 
+
+
+            <div class="session-info">
+
+                <p id="session-title" class="session-title">
+                    🍅 Foco
+                </p>
+
+                <p id="cycle-info" class="cycle-info">
+                    Ciclo 1 de 4
+                </p>
+
+            </div>
+
+            <div class="controls">
+
+                <div class="control-buttons">
+
+                    <button id="pause-button" class="secondary-button">
+                        Pausar
+                    </button>
+
+                    <button id="reset-button" class="secondary-button">
+                        Resetar
+                    </button>
+
+                </div>
+
+                <button id="customize-button" class="customize-button">
+
+                    Personalize sua sessão
+
+                </button>
+
+                <button id="end-session-button" class="end-session-button">
+
+                    Encerrar sessão
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Mascote -->
+        <section class="mascot-card">
+
+            <div class="mascot-content">
+
+
+                <div class="mascot-header">
+
+                    <h2>
+                        Seu companheiro!
+                    </h2>
+
+                    <p>
+                        Vamos focar juntos
+                    </p>
+
+                </div>
+
+
+                <div class="mascot-level">
+
+                    <h3>
+                        Nível 5
+                    </h3>
+
+                    <div class="progress-bar">
+
+                        <div class="progress-fill"></div>
+
+                    </div>
+
+                    <span>
+                        850 / 960
+                    </span>
+
+                </div>
+
+
+                <div class="cat-area">
+
+                    <h3>
+                        Nori
+                    </h3>
+
+                    <img src="assets/nori.png" alt="Nori">
+
+                </div>
+
+
+                <div id="mascot-message" class="mascot-message">
+
+                    Miau! Vamos focar mais um pouquinho? 🐾
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Missões -->
+        <section class="missions-card">
+
+            <div class="missions-header">
+
+                <h2>Missões de Hoje</h2>
+                <p>Planeje, execute, conquiste.</p>
+
+            </div>
+
+            <div class="missions-list">
+
+                <label class="mission">
+
+                    <input type="checkbox">
+                    <span>Completar 2 pomodoros</span>
+
+                </label>
+
+                <label class="mission">
+
+                    <input type="checkbox">
+                    <span>Beber água</span>
+
+                </label>
+
+                <label class="mission">
+
+                    <input type="checkbox">
+                    <span>Ler 20 páginas</span>
+
+                </label>
+
+            </div>
+
+            <button class="add-mission">
+
+                + Nova Missão
+
+            </button>
+
+        </section>
+
+
+
+        <!-- Ambiente -->
+        <section class="environment-card">
+
+            <div class="environment-header">
+
+                <h2>Ambiente</h2>
+                <p>Escolha sua atmosfera</p>
+
+            </div>
+
+            <div class="environment-buttons">
+
+                <button class="environment-button">
+
+                    <img src="assets/chuva.png" alt="Chuva">
+                    <span>Chuva</span>
+
+                </button>    
+                
+                <button class="environment-button">
+
+                    <img src="assets/café.png" alt="Café">
+                    <span>Café</span>
+
+                </button>
+
+                <button class="environment-button">
+
+                    <img src="assets/oceano.png" alt="Oceano" class="ocean-icon">
+                    <span>Oceano</span>
+
+                </button>
+
+                <button class="environment-button">
+
+                    <img src="assets/floresta.png" alt="Floresta">
+                    <span>Floresta</span>
+
+                </button>
+
+            </div>
+
+            <div class="volume-control">
+
+                <label>Som</label>
+                <input type="range" min="0" max="100" value="50">
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+    <div id="settings-modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Personalizar Sessão</h2>
+
+            <p>Tempo de foco</p>
+
+            <input
+                type="number"
+                id="focus-time"
+                min="1"
+                value="25"
+            >
+
+            <p>Tempo de descanso</p>
+
+            <input
+                type="number"
+                id="break-time"
+                min="1"
+                value="5"
+            >
+
+            <p>Número de ciclos</p>
+
+            <input
+                type="number"
+                id="cycle-count"
+                min="1"
+                value="4">
+
+            <div class="modal-buttons">
+
+                <button id="cancel-settings" class="modal-button cancel-button">
+                    Cancelar
+                </button>
+
+                <button id="save-settings" class="modal-button save-button">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="confirm-modal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>🐱 Nori pergunta...</h2>
+
+        <p>
+            Tem certeza de que deseja encerrar sua sessão? Você perderá o progresso da sessão atual.
+        </p>
+
+        <div class="modal-buttons">
+
+            <button id="cancel-end" class="modal-button cancel-button">
+                Cancelar
+            </button>
+
+            <button id="confirm-end" class="modal-button save-button">
+                Encerrar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

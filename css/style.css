@@ -1,0 +1,51 @@
+@import url("variables.css");
+@import url("layout.css");
+@import url("cards.css");
+@import url("components.css");
+
+:root{
+    --background:#F8EAD8;
+    --card:#FDF5E9;
+
+    --primary:#939C6E;
+
+    --radius:32px;
+
+    --shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    width: 1400px;
+    height: 900px;
+
+    display: grid;
+
+    grid-template-columns: 500px 324px 500px;
+    grid-template-rows: 408px 388px;
+
+    gap: 24px;
+}
+
+.pomodoro-card,
+.mascote-card,
+.missoes-card,
+.ambiente-card {
+    background-color: var(--card);
+    border-radius: 32px;
+}
