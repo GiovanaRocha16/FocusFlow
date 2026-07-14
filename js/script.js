@@ -276,7 +276,7 @@ saveSettings.addEventListener("click", () => {
 
     updateTimer();
     updateSessionInfo();
-    
+
     saveData();
 
 
@@ -437,11 +437,42 @@ function updateVolumeSlider() {
 
 addMissionButton.addEventListener("click", () => {
 
-    missionInput.value = "";
+    const mission = document.createElement("label");
 
-    missionModal.style.display = "flex";
+    mission.className = "mission";
 
-    missionInput.focus();
+
+    mission.innerHTML = `
+
+        <input type="checkbox">
+
+        <span>${missionText}</span>
+
+        <button class="delete-mission">
+            🗑️
+        </button>
+
+    `;
+
+
+    missionsList.appendChild(mission);
+
+
+    const checkbox = mission.querySelector("input");
+
+
+    checkbox.addEventListener("change", () => {
+
+        if (checkbox.checked && !checkbox.dataset.rewarded) {
+
+            addXP(10);
+
+            checkbox.dataset.rewarded = "true";
+
+        }
+
+    });
+
 
 });
 
