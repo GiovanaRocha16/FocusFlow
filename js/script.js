@@ -437,25 +437,9 @@ function updateVolumeSlider() {
 
 addMissionButton.addEventListener("click", () => {
 
-    const mission = document.createElement("label");
+    missionInput.value = "";
 
-    mission.className = "mission";
-
-
-    mission.innerHTML = `
-
-        <input type="checkbox">
-
-        <span>${missionText}</span>
-
-        <button class="delete-mission">
-            🗑️
-        </button>
-
-    `;
-
-
-    missionsList.appendChild(mission);
+    missionModal.style.display = "flex";
 
 });
 
@@ -552,20 +536,6 @@ function addXP(amount) {
     saveData();
 
 }
-
-const checkbox = mission.querySelector("input");
-
-checkbox.addEventListener("change", () => {
-
-    if (checkbox.checked && !checkbox.dataset.rewarded) {
-
-        addXP(10);
-
-        checkbox.dataset.rewarded = "true";
-
-    }
-
-});
 
 function saveData() {
 
