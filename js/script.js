@@ -16,6 +16,13 @@ const endSessionButton = document.getElementById("end-session-button");
 const confirmModal = document.getElementById("confirm-modal");
 const cancelEnd = document.getElementById("cancel-end");
 const confirmEnd = document.getElementById("confirm-end");
+const progressRing = document.getElementById("progress-ring");
+const radius = 145;
+const circumference = 2 * Math.PI * radius;
+
+progressRing.style.strokeDasharray = circumference;
+
+progressRing.style.strokeDashoffset = 0;
 
 let focusTime = 25;
 let breakTime = 5;
@@ -56,6 +63,21 @@ function updateTimer() {
 
     timer.textContent =
         `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    updateProgress();
+
+}
+
+function updateProgress() {
+
+    const totalTime = isBreak
+        ? breakTime * 60
+        : focusTime * 60;
+
+    const progress = timeLeft / totalTime;
+
+    progressRing.style.strokeDashoffset =
+        circumference * (1 - progress);
 
 }
 

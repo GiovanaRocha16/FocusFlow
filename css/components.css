@@ -31,7 +31,7 @@
 
 .start-button {
 
-    margin-top: -35px;
+    margin-top: -55px;
 
     width: 150px;
 
@@ -54,6 +54,10 @@
     cursor: pointer;
 
     transition: 0.2s ease;
+
+    position: relative;
+    
+    z-index: 2;
 
 }
 

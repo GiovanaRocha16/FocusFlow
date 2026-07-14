@@ -62,19 +62,60 @@
 
 .timer-circle {
 
-    width:300px;
+    position: relative;
 
-    height:300px;
+    width: 320px;
 
-    border-radius:50%;
+    height: 320px;
 
-    border:6px solid var(--circle);
+    display: flex;
 
-    display:flex;
+    justify-content: center;
 
-    justify-content:center;
+    align-items: center;
 
-    align-items:center;
+}
+
+.progress-ring {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform: rotate(-90deg);
+
+}
+
+.progress-ring-background {
+
+    fill: none;
+
+    stroke: #ECD6BB;
+
+    stroke-width: 8;
+
+}
+
+.progress-ring-fill {
+
+    fill: none;
+
+    stroke: #939C6E;
+
+    stroke-width: 8;
+
+    stroke-linecap: round;
+
+    transition: stroke-dashoffset .8s linear;
+
+}
+
+.timer {
+
+    position: absolute;
+
+    z-index: 2;
 
 }
 
