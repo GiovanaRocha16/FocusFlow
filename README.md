@@ -15,6 +15,11 @@ O **FocusFlow** é uma aplicação web inspirada na técnica Pomodoro, desenvolv
 > 🚧 O projeto ainda está em desenvolvimento e novas funcionalidades serão adicionadas.
 
 ---
+## 🖥️ Como acessar o site?
+
+Por esse link: https://giovanarocha16.github.io/FocusFlow/
+
+---
 
 ## ✨ Funcionalidades
 
@@ -40,10 +45,7 @@ O **FocusFlow** é uma aplicação web inspirada na técnica Pomodoro, desenvolv
 
 ## 📌 Funcionalidades planejadas
 
-- [ ] Círculo de progresso animado
-- [ ] Sons ambientes funcionais
-- [ ] Sistema de XP e níveis
-- [ ] Missões personalizadas
+- [ ] Mensagens personalizadas
 - [ ] Sistema de login
 - [ ] Banco de dados
 
@@ -57,7 +59,7 @@ FocusFlow
 ├── assets/
 │   ├── fonts/
 │   ├── images/
-│   └── icons/
+│   └── audio/
 │
 ├── css/
 │   ├── cards.css
